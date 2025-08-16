@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="417.0" prefWidth="752.0" style="-fx-background-color: linear-gradient(to bottom right, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.ems.controllers.LoginController">
+    <children>
+        <!-- Background Images with improved layering -->
+        <ImageView fitHeight="800.0" fitWidth="800.0" layoutX="-1.0" opacity="0.3" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+            <image>
+                <Image url="@../../../../images/background3.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- Login Card Background -->
+        <AnchorPane layoutX="387.0" layoutY="38.0" prefHeight="417.0" prefWidth="388.0" style="-fx-background-color: rgba(255, 255, 255, 0.95); -fx-background-radius: 20; -fx-border-radius: 20;">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.3" />
+                    </color>
+                    <radius>25.0</radius>
+                    <offsetY>10.0</offsetY>
+                </DropShadow>
+            </effect>
+            <children>
+
+                <!-- Logo with enhanced positioning -->
+                <ImageView fitHeight="80.0" fitWidth="120.0" layoutX="134.0" layoutY="14.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/logo-removebg-preview.png" />
+                    </image>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.2" />
+                            </color>
+                            <radius>10.0</radius>
+                        </DropShadow>
+                    </effect>
+                </ImageView>
+
+                <!-- Welcome Text with better styling -->
+                <Text fx:id="welcomeText" fill="#2c3e50" layoutX="100.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back!" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="26.0" />
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.1" />
+                            </color>
+                            <radius>5.0</radius>
+                        </DropShadow>
+                    </effect>
+                </Text>
+
+                <!-- Login Button with enhanced styling -->
+                <Button fx:id="loginButton" defaultButton="true" layoutX="134.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(to bottom, #4A90E2, #357ABD); -fx-text-fill: white; -fx-background-radius: 25; -fx-font-weight: bold; -fx-font-size: 16; -fx-cursor: hand;" text="LOGIN">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.3" />
+                            </color>
+                            <radius>15.0</radius>
+                            <offsetY>5.0</offsetY>
+                        </DropShadow>
+                    </effect>
+                </Button>
+
+                <!-- Password Field with modern styling - FIXED onKeyPressed -->
+                <PasswordField fx:id="passwordField" layoutX="94.0" layoutY="272.0" onKeyPressed="#handleEnterPressed" prefHeight="35.0" prefWidth="200.0" promptText="Enter your password" style="-fx-background-color: #f8f9fa; -fx-border-color: #e9ecef; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </PasswordField>
+
+                <!-- Password Label -->
+                <Text fx:id="passwordLabel" fill="#34495e" layoutX="100.0" layoutY="268.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+
+                <!-- Username Field with modern styling - FIXED onKeyPressed -->
+                <TextField fx:id="usernameField" layoutX="94.0" layoutY="209.0" onKeyPressed="#handleEnterPressed" prefHeight="35.0" prefWidth="200.0" promptText="Enter your username" style="-fx-background-color: #f8f9fa; -fx-border-color: #e9ecef; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+
+                <!-- Username Label -->
+                <Text fx:id="usernameLabel" fill="#34495e" layoutX="102.0" layoutY="198.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+
+        <!-- Decorative Elements -->
+        <AnchorPane layoutX="50.0" layoutY="80.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(255, 255, 255, 0.1); -fx-background-radius: 100; -fx-border-radius: 100;" />
+
+        <!-- Version/Copyright Text -->
+        <Text fill="rgba(255, 255, 255, 0.7)" layoutX="615.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Management System v2.0">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Text>
+
+        <!-- Loading Indicator (initially hidden) -->
+        <AnchorPane fx:id="loadingPane" layoutX="0.0" layoutY="0.0" prefHeight="492.0" prefWidth="799.0" style="-fx-background-color: rgba(0, 0, 0, 0.3);" visible="false">
+            <Text fill="WHITE" layoutX="326.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authenticating..." textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Text>
+        </AnchorPane>
+    </children>
+</AnchorPane>

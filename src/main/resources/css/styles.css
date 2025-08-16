@@ -1,0 +1,19 @@
+.label {
+    -fx-font-size: 16px;
+}
+
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.text-field, .password-field {
+    -fx-border-color: #ccc;
+    -fx-padding: 5px;
+}
+
+.Btn_Dashboard {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-style: solid;
+}

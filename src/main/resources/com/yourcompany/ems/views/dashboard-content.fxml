@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.ems.controllers.DashboardController321">
+    <center>
+        <AnchorPane fx:id="contentArea" prefHeight="672.0" prefWidth="904.0" style="-fx-background-color: #D0F5E0;">
+            <children>
+                <HBox layoutX="50.0" layoutY="50.0" prefHeight="415.0" prefWidth="717.0" spacing="20">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5">
+                            <children>
+                                <Text fx:id="totalEmployeesText" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Employees">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5">
+                            <children>
+                                <Text fx:id="totalEmployeesText1" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="monthlyPayrollText" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Payroll">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <Label fx:id="clockLabel" layoutX="754.0" layoutY="25.0" text="00:00:00">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+
+                <Button layoutX="828.0" layoutY="628.0" text="Refresh" />
+            </children>
+        </AnchorPane>
+    </center>
+
+    <left>
+        <VBox prefHeight="672.0" prefWidth="251.0" style="-fx-background-color: #57C785;" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane />
+                <AnchorPane />
+                <AnchorPane />
+                <AnchorPane />
+                <AnchorPane />
+                <AnchorPane />
+                <AnchorPane />
+                <AnchorPane prefHeight="0.0" prefWidth="22.0" />
+
+                <ImageView fitHeight="112.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/logo-removebg-preview.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="40.0" top="15.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                <Text text="Featues">
+                    <VBox.margin>
+                        <Insets left="23.0" top="25.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Text>
+
+                <Button mnemonicParsing="false" style="-fx-background-color: #007D49;" text="Dashbord" onAction="#handleDashboard" prefHeight="39.0" prefWidth="203.0">
+                    <VBox.margin>
+                        <Insets left="23.0" top="5.0" />
+                    </VBox.margin>
+                </Button>
+
+                <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/icons8-dashboard-48.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="35.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                <Button mnemonicParsing="false" onAction="#handleMessages" style="-fx-background-color: #007D49;" text="Messages" prefHeight="39.0" prefWidth="203.0">
+                    <VBox.margin>
+                        <Insets left="23.0" top="11.0" />
+                    </VBox.margin>
+                </Button>
+
+                <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/icons8-messages-48.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="35.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                <Text text="Recruitment">
+                    <VBox.margin>
+                        <Insets left="23.0" top="18.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Text>
+
+                <Button mnemonicParsing="false" onAction="#handleJobs" style="-fx-background-color: #007D49;" text="Jobs" prefHeight="39.0" prefWidth="203.0">
+                    <VBox.margin>
+                        <Insets left="23.0" top="5.0" />
+                    </VBox.margin>
+                </Button>
+
+                <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/icons8-jobs-58.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="35.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                <Button mnemonicParsing="false" style="-fx-background-color: #007D49;" text="Candidates" prefHeight="39.0" prefWidth="203.0">
+                    <VBox.margin>
+                        <Insets left="23.0" top="11.0" />
+                    </VBox.margin>
+                </Button>
+
+                <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/icons8-employee-48.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="35.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                <Button mnemonicParsing="false" style="-fx-background-color: #007D49;" text="Report" prefHeight="39.0" prefWidth="203.0">
+                    <VBox.margin>
+                        <Insets left="23.0" top="11.0" />
+                    </VBox.margin>
+                </Button>
+
+                <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/icons8-report-48.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="35.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                <Text text="Organization">
+                    <VBox.margin>
+                        <Insets left="23.0" top="18.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Text>
+
+                <Button mnemonicParsing="false" onAction="#handlePayroll" style="-fx-background-color: #007D49;" text="      Payroll Management" prefHeight="39.0" prefWidth="203.0">
+                    <VBox.margin>
+                        <Insets left="23.0" top="5.0" />
+                    </VBox.margin>
+                </Button>
+
+                <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/icons8-55-secure-payments-58.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="35.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                <Button mnemonicParsing="false" onAction="#handleAddEmployee" style="-fx-background-color: #007D49;" text="           Employee Management" prefHeight="39.0" prefWidth="203.0">
+                    <VBox.margin>
+                        <Insets left="23.0" top="11.0" />
+                    </VBox.margin>
+                </Button>
+
+                <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/icons8-crowd-50.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="35.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+
+                <Button mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: #DB1B18;" text="Log Out" underline="true" wrapText="true" prefHeight="30.0" prefWidth="126.0">
+                    <effect>
+                        <Bloom />
+                    </effect>
+                    <VBox.margin>
+                        <Insets left="60.0" top="50.0" />
+                    </VBox.margin>
+                </Button>
+
+                <ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+                    <image>
+                        <Image url="@../../../../images/92961.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="65.0" top="-29.0" />
+                    </VBox.margin>
+                </ImageView>
+            </children>
+        </VBox>
+    </left>
+</BorderPane>

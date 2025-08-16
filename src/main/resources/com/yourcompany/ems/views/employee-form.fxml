@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="492.0" prefWidth="358.0" spacing="10" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.ems.controllers.EmployeeController">
+
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Employee Form" />
+
+    <TextField fx:id="idField" promptText="Employee ID" editable="true" />
+    <TextField fx:id="nameField" promptText="Name" />
+    <TextField fx:id="emailField" promptText="Email" />
+    <TextField fx:id="phoneField" promptText="Phone" />
+    <TextField fx:id="positionField" promptText="Position" />
+    <TextField fx:id="departmentField" promptText="Department" />
+    <TextField fx:id="salaryField" promptText="Salary" />
+    <DatePicker fx:id="hireDatePicker" promptText="Hire Date" />
+
+    <Button onAction="#handleChooseAvatar" text="Choose Avatar" />
+    <Button onAction="#handleSave" text="Save" />
+   <ImageView fx:id="avatarImageView" fitHeight="104.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true" />
+
+</VBox>

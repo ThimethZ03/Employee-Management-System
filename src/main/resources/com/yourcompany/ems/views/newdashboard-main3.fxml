@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="672.0" prefWidth="1115.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.ems.controllers.MainDashboardController">
+
+    <!-- Sidebar area -->
+    <left>
+        <VBox fx:id="sidebar" prefHeight="672.0" prefWidth="251.0" style="-fx-background-color: #57C785;">
+            <!-- Sidebar will be loaded dynamically -->
+        </VBox>
+    </left>
+
+    <!-- Main content area -->
+    <center>
+        <AnchorPane fx:id="contentArea" prefHeight="690.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+            <!-- Loaded content like newdashboard.fxml or messages.fxml goes here -->
+        </AnchorPane>
+    </center>
+
+</BorderPane>

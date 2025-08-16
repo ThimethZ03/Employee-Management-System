@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="643.0" prefWidth="902.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.ems.controllers.NewDashboardController">
+   <children>
+      <!-- Digital Clock Section with Enhanced Design -->
+      <AnchorPane fx:id="clockSection" layoutX="32.0" layoutY="39.0" prefHeight="100.0" prefWidth="260.0" style="-fx-background-color: rgba(0, 0, 0, 0.8);                          -fx-background-radius: 15;                          -fx-border-color: rgba(52, 152, 219, 0.6);                          -fx-border-width: 2;                          -fx-border-radius: 15;                          -fx-effect: dropshadow(three-pass-box, rgba(52, 152, 219, 0.4), 15, 0.3, 0, 0);">
+         <children>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="240.0" spacing="3.0">
+               <children>
+                  <Label fx:id="clockLabel" style="-fx-text-fill: #00ff41;                                 -fx-font-size: 28px;                                 -fx-font-family: 'Courier New';                                 -fx-font-weight: bold;                                 -fx-effect: dropshadow(gaussian, #00ff41, 3, 0.8, 0, 0);" text="00:00:00">
+                     <font>
+                        <Font name="Courier New Bold" size="28.0" />
+                     </font>
+                  </Label>
+
+                  <Label fx:id="dateLabel" style="-fx-text-fill: rgba(255,255,255,0.9);                                 -fx-font-size: 12px;                                 -fx-font-family: 'Segoe UI';                                 -fx-text-alignment: center;" text="Loading date..." wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+
+      <!-- Profile Section with Avatar Glow - Moved to avoid clash -->
+      <AnchorPane fx:id="profileSection" layoutX="32.0" layoutY="150.0" prefHeight="120.0" prefWidth="400.0" style="-fx-background-color: rgba(255, 255, 255, 0.15);                          -fx-background-radius: 15;                          -fx-border-color: rgba(255, 255, 255, 0.2);                          -fx-border-width: 1;                          -fx-border-radius: 15;                          -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0.2, 0, 3);">
+         <children>
+            <HBox layoutX="20.0" layoutY="15.0" prefHeight="90.0" prefWidth="360.0" spacing="20.0">
+               <children>
+                  <!-- Avatar Container with Glow Effect -->
+                  <VBox alignment="CENTER" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <ImageView fx:id="avatarImageView" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 40;                                           -fx-border-radius: 40;                                           -fx-border-color: rgba(255,255,255,0.5);                                           -fx-border-width: 3;                                           -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.6), 15, 0.5, 0, 0);" />
+                     </children>
+                  </VBox>
+
+                  <!-- Welcome Text Container -->
+                  <VBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="250.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="welcomeLabel" prefWidth="250.0" style="-fx-text-fill: white;                                       -fx-font-size: 16px;                                       -fx-font-weight: bold;                                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 2, 0, 0, 1);" text="Loading user..." wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+
+                        <!-- Status Indicator -->
+                        <HBox alignment="CENTER_LEFT" spacing="8.0">
+                           <children>
+                              <Label fx:id="statusLabel" style="-fx-text-fill: #2ecc71;                                             -fx-font-size: 12px;                                             -fx-font-weight: bold;" text="● Online" />
+
+                              <Label fx:id="lastUpdateLabel" style="-fx-text-fill: rgba(255,255,255,0.7);                                             -fx-font-size: 11px;" text="Last updated: now" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+
+      <!-- Weather Section with Glass Effect - Repositioned -->
+      <AnchorPane fx:id="weatherSection" layoutX="450.0" layoutY="39.0" prefHeight="144.0" prefWidth="380.0" style="-fx-background-color: rgba(255, 255, 255, 0.2);                          -fx-background-radius: 15;                          -fx-border-color: rgba(255, 255, 255, 0.3);                          -fx-border-width: 1;                          -fx-border-radius: 15;                          -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0.2, 0, 5);">
+         <children>
+            <ImageView fx:id="weatherIcon" fitHeight="64.0" fitWidth="64.0" layoutX="15.0" layoutY="40.0" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 2);" />
+      
+            <Label fx:id="temperatureLabel" layoutX="90.0" layoutY="25.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;                           -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 2, 0, 0, 1);" text="Loading...">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+      
+            <Label fx:id="weatherDescriptionLabel" layoutX="90.0" layoutY="65.0" style="-fx-font-size: 12px; -fx-text-fill: rgba(255,255,255,0.9);                           -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);" text="Fetching weather..." />
+      
+            <VBox layoutX="240.0" layoutY="20.0" spacing="6.0">
+               <children>
+                  <Label fx:id="locationLabel" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: white;                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);" text="📍 Loading..." />
+      
+                  <Label fx:id="windLabel" style="-fx-font-size: 11px; -fx-text-fill: rgba(255,255,255,0.8);                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);" text="💨 Wind: -- m/s" />
+      
+                  <Label fx:id="humidityLabel" style="-fx-font-size: 11px; -fx-text-fill: rgba(255,255,255,0.8);                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);" text="💧 Humidity: --%%" />
+      
+                  <Label fx:id="pressureLabel" style="-fx-font-size: 11px; -fx-text-fill: rgba(255,255,255,0.8);                                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);" text="🌡️ Pressure: -- hPa" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+
+      <!-- Weather Refresh Button -->
+      <AnchorPane fx:id="refreshWeatherBtn" layoutX="450.0" layoutY="195.0" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: rgba(52, 152, 219, 0.8);                          -fx-background-radius: 20;                          -fx-border-color: rgba(255,255,255,0.3);                          -fx-border-width: 1;                          -fx-border-radius: 20;                          -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0.2, 0, 2);">
+         <children>
+            <Label layoutX="35.0" layoutY="12.0" style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;" text="🔄 Refresh" />
+         </children>
+      </AnchorPane>
+
+      <!-- System Stats Section -->
+      <AnchorPane fx:id="statsSection" layoutX="450.0" layoutY="280.0" prefHeight="120.0" prefWidth="380.0" style="-fx-background-color: rgba(255, 255, 255, 0.1);                          -fx-background-radius: 15;                          -fx-border-color: rgba(255, 255, 255, 0.2);                          -fx-border-width: 1;                          -fx-border-radius: 15;                          -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0.2, 0, 3);">
+         <children>
+            <Label layoutX="20.0" layoutY="15.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;                           -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);" text="📊 System Stats">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+
+            <HBox layoutX="20.0" layoutY="45.0" spacing="30.0">
+               <children>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label fx:id="totalEmployeesLabel" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2ecc71;                                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);" text="0" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: rgba(255,255,255,0.8);" text="Total Employees" />
+                     </children>
+                  </VBox>
+
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label fx:id="totalMessagesLabel" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #e74c3c;                                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);" text="0" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: rgba(255,255,255,0.8);" text="Total Messages" />
+                     </children>
+                  </VBox>
+
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label fx:id="activeUsersLabel" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #f39c12;                                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);" text="0" />
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: rgba(255,255,255,0.8);" text="Active Users" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+
+      <!-- Messages Section with Modern Card Design -->
+      <AnchorPane fx:id="messagesSection" layoutX="32.0" layoutY="430.0" prefHeight="220.0" prefWidth="800.0" style="-fx-background-color: rgba(255, 255, 255, 0.95);                          -fx-background-radius: 20;                          -fx-border-color: rgba(255, 255, 255, 0.3);                          -fx-border-width: 1;                          -fx-border-radius: 20;                          -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 20, 0.1, 0, 8);">
+         <children>
+            <Label layoutX="30.0" layoutY="15.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="📧 Recent Messages">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+
+            <TableView fx:id="recentMessagesTable" layoutX="20.0" layoutY="50.0" prefHeight="160.0" prefWidth="760.0" style="-fx-background-color: transparent;                               -fx-table-cell-border-color: transparent;                               -fx-focus-color: transparent;                               -fx-selection-bar: rgba(52, 152, 219, 0.3);                               -fx-selection-bar-non-focused: rgba(52, 152, 219, 0.2);">
+               <columns>
+                  <TableColumn fx:id="senderColumn" prefWidth="180.0" style="-fx-background-color: rgba(52, 152, 219, 0.1);" text="👤 Sender" />
+                  <TableColumn fx:id="subjectColumn" prefWidth="400.0" style="-fx-background-color: rgba(52, 152, 219, 0.1);" text="📝 Subject" />
+                  <TableColumn fx:id="sentTimeColumn" prefWidth="180.0" style="-fx-background-color: rgba(52, 152, 219, 0.1);" text="📅 Date" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+
+      <!-- Quick Actions Section -->
+      <AnchorPane fx:id="quickActionsSection" layoutX="32.0" layoutY="280.0" prefHeight="140.0" prefWidth="400.0" style="-fx-background-color: rgba(255, 255, 255, 0.1);                          -fx-background-radius: 15;                          -fx-border-color: rgba(255, 255, 255, 0.2);                          -fx-border-width: 1;                          -fx-border-radius: 15;                          -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0.2, 0, 3);">
+         <children>
+            <Label layoutX="20.0" layoutY="15.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;                           -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);" text="⚡ Quick Actions">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+
+            <HBox layoutX="20.0" layoutY="50.0" spacing="15.0">
+               <children>
+                  <!-- New Message Button -->
+                  <AnchorPane prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: rgba(46, 204, 113, 0.8);                                      -fx-background-radius: 10;                                      -fx-border-color: rgba(255,255,255,0.2);                                      -fx-border-width: 1;                                      -fx-border-radius: 10;                                      -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0.2, 0, 2);">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="8.0" spacing="2.0">
+                           <children>
+                              <Label style="-fx-text-fill: white; -fx-font-size: 18px;" text="✉️" />
+                              <Label style="-fx-text-fill: white; -fx-font-size: 10px; -fx-font-weight: bold;" text="New Message" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+
+                  <!-- View Employees Button -->
+                  <AnchorPane prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: rgba(52, 152, 219, 0.8);                                      -fx-background-radius: 10;                                      -fx-border-color: rgba(255,255,255,0.2);                                      -fx-border-width: 1;                                      -fx-border-radius: 10;                                      -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0.2, 0, 2);">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="8.0" spacing="2.0">
+                           <children>
+                              <Label style="-fx-text-fill: white; -fx-font-size: 18px;" text="👥" />
+                              <Label style="-fx-text-fill: white; -fx-font-size: 10px; -fx-font-weight: bold;" text="Employees" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+
+                  <!-- Reports Button -->
+                  <AnchorPane prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: rgba(155, 89, 182, 0.8);                                      -fx-background-radius: 10;                                      -fx-border-color: rgba(255,255,255,0.2);                                      -fx-border-width: 1;                                      -fx-border-radius: 10;                                      -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0.2, 0, 2);">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="8.0" spacing="2.0">
+                           <children>
+                              <Label style="-fx-text-fill: white; -fx-font-size: 18px;" text="📊" />
+                              <Label style="-fx-text-fill: white; -fx-font-size: 10px; -fx-font-weight: bold;" text="Reports" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+
+                  <!-- Settings Button -->
+                  <AnchorPane prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: rgba(231, 76, 60, 0.8);                                      -fx-background-radius: 10;                                      -fx-border-color: rgba(255,255,255,0.2);                                      -fx-border-width: 1;                                      -fx-border-radius: 10;                                      -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0.2, 0, 2);">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="8.0" spacing="2.0">
+                           <children>
+                              <Label style="-fx-text-fill: white; -fx-font-size: 18px;" text="⚙️" />
+                              <Label style="-fx-text-fill: white; -fx-font-size: 10px; -fx-font-weight: bold;" text="Settings" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+
+                        <!-- Animated Background Elements -->
+      <AnchorPane mouseTransparent="true" prefHeight="678.0" prefWidth="902.0">
+         <children>
+            <!-- Floating Particles -->
+            <Label fx:id="particle1" layoutX="100.0" layoutY="300.0" style="-fx-text-fill: rgba(255,255,255,0.1); -fx-font-size: 30px;" text="✨" />
+            <Label fx:id="particle2" layoutX="200.0" layoutY="150.0" style="-fx-text-fill: rgba(255,255,255,0.08); -fx-font-size: 25px;" text="⭐" />
+            <Label fx:id="particle3" layoutX="700.0" layoutY="400.0" style="-fx-text-fill: rgba(255,255,255,0.06); -fx-font-size: 35px;" text="🌟" />
+            <Label fx:id="particle4" layoutX="600.0" layoutY="100.0" style="-fx-text-fill: rgba(255,255,255,0.09); -fx-font-size: 20px;" text="💫" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="sidebar" prefHeight="672.0" prefWidth="251.0" style="-fx-background-color: linear-gradient(to bottom, #57C785, #45B571);              -fx-background-radius: 0 15 15 0;              -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 3, 0);" stylesheets="@../../../../css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.ems.controllers.SidebarController">
+    <children>
+
+        <!-- Logo with hover animation -->
+        <ImageView fx:id="logoImage" fitHeight="112.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);">
+            <image>
+                <Image url="@../../../../images/logo-removebg-preview.png" />
+            </image>
+            <VBox.margin>
+                <Insets left="40.0" top="15.0" />
+            </VBox.margin>
+        </ImageView>
+
+        <!-- Features Header -->
+        <Text fill="white" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 2, 0, 1, 1);" text="Features">
+            <VBox.margin>
+                <Insets left="23.0" top="25.0" />
+            </VBox.margin>
+        </Text>
+
+        <!-- Dashboard Button -->
+        <Button fx:id="Btn_Dashboard" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #007D49;                        -fx-background-radius: 8;                        -fx-border-radius: 8;                        -fx-font-weight: bold;                        -fx-font-size: 12px;                        -fx-cursor: hand;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 1, 1);                        -fx-transition: all 0.3s ease;" text="Dashboard" textFill="white">
+            <VBox.margin>
+                <Insets left="23.0" top="5.0" />
+            </VBox.margin>
+        </Button>
+
+        <ImageView fx:id="dashboardIcon" fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../images/icons8-dashboard-48.png" />
+            </image>
+            <VBox.margin>
+                <Insets bottom="5.0" left="35.0" top="-35.0" />
+            </VBox.margin>
+        </ImageView>
+
+        <!-- Messages Button -->
+        <Button fx:id="Btn_Messages" mnemonicParsing="false" onAction="#handleMessages" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #007D49;                        -fx-background-radius: 8;                        -fx-border-radius: 8;                        -fx-font-weight: bold;                        -fx-font-size: 12px;                        -fx-cursor: hand;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 1, 1);                        -fx-transition: all 0.3s ease;" text="Messages" textFill="white">
+            <VBox.margin>
+                <Insets left="23.0" top="11.0" />
+            </VBox.margin>
+        </Button>
+
+        <ImageView fx:id="messagesIcon" fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../images/icons8-messages-48.png" />
+            </image>
+            <VBox.margin>
+                <Insets bottom="5.0" left="35.0" top="-35.0" />
+            </VBox.margin>
+        </ImageView>
+
+        <!-- Recruitment Header -->
+        <Text fill="white" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 2, 0, 1, 1);" text="Recruitment">
+            <VBox.margin>
+                <Insets left="23.0" top="18.0" />
+            </VBox.margin>
+        </Text>
+
+        <!-- Jobs Button -->
+        <Button fx:id="Btn_Jobs" mnemonicParsing="false" onAction="#handleJobs" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #007D49;                        -fx-background-radius: 8;                        -fx-border-radius: 8;                        -fx-font-weight: bold;                        -fx-font-size: 12px;                        -fx-cursor: hand;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 1, 1);                        -fx-transition: all 0.3s ease;" text="Jobs" textFill="white">
+            <VBox.margin>
+                <Insets left="23.0" top="5.0" />
+            </VBox.margin>
+        </Button>
+
+        <ImageView fx:id="jobsIcon" fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../images/icons8-jobs-58.png" />
+            </image>
+            <VBox.margin>
+                <Insets bottom="5.0" left="35.0" top="-35.0" />
+            </VBox.margin>
+        </ImageView>
+
+        <!-- Candidates Button -->
+        <Button fx:id="Btn_Candidates" mnemonicParsing="false" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #007D49;                        -fx-background-radius: 8;                        -fx-border-radius: 8;                        -fx-font-weight: bold;                        -fx-font-size: 12px;                        -fx-cursor: hand;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 1, 1);                        -fx-transition: all 0.3s ease;" text="Candidates" textFill="white">
+            <VBox.margin>
+                <Insets left="23.0" top="11.0" />
+            </VBox.margin>
+        </Button>
+
+        <ImageView fx:id="candidatesIcon" fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../images/icons8-employee-48.png" />
+            </image>
+            <VBox.margin>
+                <Insets bottom="5.0" left="35.0" top="-35.0" />
+            </VBox.margin>
+        </ImageView>
+
+        <!-- Report Button -->
+        <Button fx:id="Btn_Report" mnemonicParsing="false" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #007D49;                        -fx-background-radius: 8;                        -fx-border-radius: 8;                        -fx-font-weight: bold;                        -fx-font-size: 12px;                        -fx-cursor: hand;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 1, 1);                        -fx-transition: all 0.3s ease;" text="Report" textFill="white">
+            <VBox.margin>
+                <Insets left="23.0" top="11.0" />
+            </VBox.margin>
+        </Button>
+
+        <ImageView fx:id="reportIcon" fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../images/icons8-report-48.png" />
+            </image>
+            <VBox.margin>
+                <Insets bottom="5.0" left="35.0" top="-35.0" />
+            </VBox.margin>
+        </ImageView>
+
+        <!-- Organization Header -->
+        <Text fill="white" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 2, 0, 1, 1);" text="Organization">
+            <VBox.margin>
+                <Insets left="23.0" top="18.0" />
+            </VBox.margin>
+        </Text>
+
+        <!-- Payroll Button -->
+        <Button fx:id="Btn_Payroll" mnemonicParsing="false" onAction="#handlePayroll" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #007D49;                        -fx-background-radius: 8;                        -fx-border-radius: 8;                        -fx-font-weight: bold;                        -fx-font-size: 11px;                        -fx-cursor: hand;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 1, 1);                        -fx-transition: all 0.3s ease;" text="     Payroll Management" textFill="white">
+            <VBox.margin>
+                <Insets left="23.0" top="5.0" />
+            </VBox.margin>
+        </Button>
+
+        <ImageView fx:id="payrollIcon" fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../images/icons8-55-secure-payments-58.png" />
+            </image>
+            <VBox.margin>
+                <Insets bottom="5.0" left="35.0" top="-35.0" />
+            </VBox.margin>
+        </ImageView>
+
+        <!-- Employee Management Button -->
+        <Button fx:id="Btn_EM" mnemonicParsing="false" onAction="#openEmployeeManagementPage" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: #007D49;                        -fx-background-radius: 8;                        -fx-border-radius: 8;                        -fx-font-weight: bold;                        -fx-font-size: 11px;                        -fx-cursor: hand;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 1, 1);                        -fx-transition: all 0.3s ease;" text="     Employee Management" textFill="white">
+            <VBox.margin>
+                <Insets left="23.0" top="11.0" />
+            </VBox.margin>
+        </Button>
+
+        <ImageView fx:id="employeeIcon" fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../images/icons8-crowd-50.png" />
+            </image>
+            <VBox.margin>
+                <Insets bottom="5.0" left="35.0" top="-35.0" />
+            </VBox.margin>
+        </ImageView>
+
+        <!-- Logout Button with special styling -->
+        <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogout" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: linear-gradient(to bottom, #FF4444, #CC0000);                        -fx-background-radius: 25;                        -fx-border-radius: 25;                        -fx-font-weight: bold;                        -fx-font-size: 13px;                        -fx-cursor: hand;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 5, 0, 2, 2);                        -fx-transition: all 0.3s ease;" text="Log Out" textFill="white">
+            <VBox.margin>
+                <Insets left="55.0" top="40.0" />
+            </VBox.margin>
+        </Button>
+    </children>
+</VBox>

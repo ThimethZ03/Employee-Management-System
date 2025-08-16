@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="600.0" minHeight="300.0" prefHeight="462.0" prefWidth="674.0" style="-fx-background-color: #f8f9fa;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.ems.controllers.AddUserFormController">
+    <children>
+          <!-- Header -->
+          <Label layoutX="54.0" layoutY="14.0" prefHeight="20.0" prefWidth="170.0" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #333; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 1, 0, 0, 1);" text="Add New User" />
+            <!-- ID Field -->
+            <VBox layoutX="40.0" layoutY="49.0" prefHeight="99.0" prefWidth="315.0" spacing="8">
+                <children>
+                    <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #333;" text="Employee ID:" />
+                    <TextField fx:id="idField" prefHeight="69.0" prefWidth="316.0" promptText="Enter unique employee ID" style="-fx-font-size: 14; -fx-padding: 12; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #ddd; -fx-border-width: 1;" />
+                    <Label fx:id="idValidationLabel" style="-fx-font-size: 12; -fx-text-fill: #e74c3c;" text="" />
+                </children>
+            </VBox>
+
+            <!-- Username Field -->
+            <VBox layoutX="37.0" layoutY="138.0" prefHeight="92.0" prefWidth="315.0" spacing="8">
+                <children>
+                    <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #333;" text="Username or Email:" />
+                    <TextField fx:id="usernameField" prefHeight="47.0" prefWidth="375.0" promptText="Enter username or email address" style="-fx-font-size: 14; -fx-padding: 12; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #ddd; -fx-border-width: 1;" />
+                    <Label fx:id="usernameValidationLabel" style="-fx-font-size: 12; -fx-text-fill: #e74c3c;" text="" />
+                </children>
+            </VBox>
+              <Label layoutX="37.0" layoutY="220.0" style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #333;" text="Password:" />
+              <PasswordField fx:id="passwordField" layoutX="37.0" layoutY="248.0" prefHeight="46.0" prefWidth="315.0" promptText="Enter secure password" style="-fx-font-size: 14; -fx-padding: 12; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #ddd; -fx-border-width: 1;" />
+              <Label fx:id="passwordValidationLabel" layoutX="37.0" layoutY="302.0" style="-fx-font-size: 12; -fx-text-fill: #e74c3c;" text="" />
+              <Label fx:id="passwordStrengthLabel" layoutX="37.0" layoutY="327.0" style="-fx-font-size: 12; -fx-text-fill: #666;" text="" />
+              <ComboBox fx:id="roleComboBox" layoutX="31.0" layoutY="336.0" promptText="Select user role" style="-fx-font-size: 14; -fx-pref-width: 200; -fx-background-radius: 8; -fx-border-radius: 8;" />
+              <Label fx:id="roleValidationLabel" layoutX="40.0" layoutY="563.0" style="-fx-font-size: 12; -fx-text-fill: #e74c3c;" text="" />
+              <Button fx:id="saveBtn" layoutX="31.0" layoutY="376.0" onAction="#handleAddUser" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-padding: 12 30; -fx-background-radius: 25; -fx-border-radius: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 2);" text="💾 Save User" />
+
+                          <Button fx:id="cancelBtn" layoutX="195.0" layoutY="376.0" onAction="#handleCancel" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14; -fx-padding: 12 30; -fx-background-radius: 25; -fx-border-radius: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 2);" text="✖ Cancel" />
+
+          <!-- Success/Error Message -->
+          <Label fx:id="messageLabel" layoutX="167.0" layoutY="694.0" style="-fx-font-size: 14; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 8;" text="" visible="false" />
+
+          <!-- Loading Indicator -->
+          <ProgressIndicator fx:id="loadingIndicator" layoutX="131.0" layoutY="759.0" prefHeight="30" prefWidth="30" visible="false" />
+              <Label layoutX="37.0" layoutY="309.0" style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #333;" text="Role:" />
+    </children>
+</AnchorPane>
