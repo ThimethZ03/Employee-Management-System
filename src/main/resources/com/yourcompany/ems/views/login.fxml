@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -7,125 +8,259 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootPane" prefHeight="417.0" prefWidth="752.0" style="-fx-background-color: linear-gradient(to bottom right, #667eea, #764ba2);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.ems.controllers.LoginController">
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #667eea 0%, #764ba2 100%);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.ems.controllers.LoginController">
     <children>
-        <!-- Background Images with improved layering -->
-        <ImageView fitHeight="800.0" fitWidth="800.0" layoutX="-1.0" opacity="0.3" pickOnBounds="true" preserveRatio="true" rotate="180.0">
-            <image>
-                <Image url="@../../../../images/background3.jpg" />
-            </image>
-        </ImageView>
+        <!-- Background Decorative Elements -->
+        <Circle fill="rgba(255, 255, 255, 0.1)" layoutX="416.0" layoutY="120.0" radius="80.0" />
+        <Circle fill="rgba(255, 255, 255, 0.05)" layoutX="200.0" layoutY="400.0" radius="60.0" />
+        <Circle fill="rgba(255, 255, 255, 0.08)" layoutX="100.0" layoutY="500.0" radius="40.0" />
+        <Rectangle arcHeight="15.0" arcWidth="15.0" fill="rgba(255, 255, 255, 0.08)" height="20.0" layoutX="250.0" layoutY="300.0" rotate="30.0" width="20.0" />
+        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="rgba(255, 255, 255, 0.06)" height="15.0" layoutX="180.0" layoutY="250.0" rotate="60.0" width="15.0" />
 
-        <!-- Login Card Background -->
-        <AnchorPane layoutX="387.0" layoutY="38.0" prefHeight="417.0" prefWidth="388.0" style="-fx-background-color: rgba(255, 255, 255, 0.95); -fx-background-radius: 20; -fx-border-radius: 20;">
-            <effect>
-                <DropShadow>
-                    <color>
-                        <Color opacity="0.3" />
-                    </color>
-                    <radius>25.0</radius>
-                    <offsetY>10.0</offsetY>
-                </DropShadow>
-            </effect>
+        <!-- Left Panel - Welcome Section -->
+        <AnchorPane layoutX="46.0" layoutY="157.0" prefHeight="287.0" prefWidth="400.0">
             <children>
+                <!-- Welcome Text Section -->
+                <VBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="80.0" prefWidth="300.0" spacing="20.0">
+                    <children>
+                        <!-- Logo/Brand Section -->
+                        <HBox alignment="CENTER_LEFT" spacing="15.0">
+                            <children>
+                                <Circle fill="rgba(255, 255, 255, 0.2)" radius="25.0">
+                                    <effect>
+                                        <DropShadow color="rgba(0,0,0,0.1)" radius="10.0" />
+                                    </effect>
+                                </Circle>
+                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="👥">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
 
-                <!-- Logo with enhanced positioning -->
-                <ImageView fitHeight="80.0" fitWidth="120.0" layoutX="134.0" layoutY="14.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../../../images/logo-removebg-preview.png" />
-                    </image>
-                    <effect>
-                        <DropShadow>
-                            <color>
-                                <Color opacity="0.2" />
-                            </color>
-                            <radius>10.0</radius>
-                        </DropShadow>
-                    </effect>
-                </ImageView>
+                        <!-- Main welcome text - matches controller expectation -->
+                        <Text fx:id="welcomeText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome back!">
+                            <font>
+                                <Font name="System Bold" size="42.0" />
+                            </font>
+                            <effect>
+                                <DropShadow color="rgba(0,0,0,0.2)" radius="5.0" />
+                            </effect>
+                        </Text>
 
-                <!-- Welcome Text with better styling -->
-                <Text fx:id="welcomeText" fill="#2c3e50" layoutX="100.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back!" textAlignment="CENTER">
-                    <font>
-                        <Font name="System Bold" size="26.0" />
-                    </font>
-                    <effect>
-                        <DropShadow>
-                            <color>
-                                <Color opacity="0.1" />
-                            </color>
-                            <radius>5.0</radius>
-                        </DropShadow>
-                    </effect>
-                </Text>
+                        <Text fill="rgba(255, 255, 255, 0.8)" strokeType="OUTSIDE" strokeWidth="0.0" text="You can sign in to access with your&#10;existing account." wrappingWidth="280.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
 
-                <!-- Login Button with enhanced styling -->
-                <Button fx:id="loginButton" defaultButton="true" layoutX="134.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(to bottom, #4A90E2, #357ABD); -fx-text-fill: white; -fx-background-radius: 25; -fx-font-weight: bold; -fx-font-size: 16; -fx-cursor: hand;" text="LOGIN">
-                    <font>
-                        <Font name="System Bold" size="16.0" />
-                    </font>
-                    <effect>
-                        <DropShadow>
-                            <color>
-                                <Color opacity="0.3" />
-                            </color>
-                            <radius>15.0</radius>
-                            <offsetY>5.0</offsetY>
-                        </DropShadow>
-                    </effect>
-                </Button>
-
-                <!-- Password Field with modern styling - FIXED onKeyPressed -->
-                <PasswordField fx:id="passwordField" layoutX="94.0" layoutY="272.0" onKeyPressed="#handleEnterPressed" prefHeight="35.0" prefWidth="200.0" promptText="Enter your password" style="-fx-background-color: #f8f9fa; -fx-border-color: #e9ecef; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </PasswordField>
-
-                <!-- Password Label -->
-                <Text fx:id="passwordLabel" fill="#34495e" layoutX="100.0" layoutY="268.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-
-                <!-- Username Field with modern styling - FIXED onKeyPressed -->
-                <TextField fx:id="usernameField" layoutX="94.0" layoutY="209.0" onKeyPressed="#handleEnterPressed" prefHeight="35.0" prefWidth="200.0" promptText="Enter your username" style="-fx-background-color: #f8f9fa; -fx-border-color: #e9ecef; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </TextField>
-
-                <!-- Username Label -->
-                <Text fx:id="usernameLabel" fill="#34495e" layoutX="102.0" layoutY="198.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
+                <!-- Decorative dots pattern -->
+                <VBox alignment="CENTER" layoutX="318.0" layoutY="63.0" spacing="8.0">
+                    <children>
+                        <HBox spacing="8.0">
+                            <children>
+                                <Circle fill="rgba(255, 255, 255, 0.3)" radius="3.0" />
+                                <Circle fill="rgba(255, 255, 255, 0.2)" radius="3.0" />
+                                <Circle fill="rgba(255, 255, 255, 0.1)" radius="3.0" />
+                            </children>
+                        </HBox>
+                        <HBox spacing="8.0">
+                            <children>
+                                <Circle fill="rgba(255, 255, 255, 0.2)" radius="3.0" />
+                                <Circle fill="rgba(255, 255, 255, 0.3)" radius="3.0" />
+                                <Circle fill="rgba(255, 255, 255, 0.2)" radius="3.0" />
+                            </children>
+                        </HBox>
+                        <HBox spacing="8.0">
+                            <children>
+                                <Circle fill="rgba(255, 255, 255, 0.1)" radius="3.0" />
+                                <Circle fill="rgba(255, 255, 255, 0.2)" radius="3.0" />
+                                <Circle fill="rgba(255, 255, 255, 0.3)" radius="3.0" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
             </children>
         </AnchorPane>
 
-        <!-- Decorative Elements -->
-        <AnchorPane layoutX="50.0" layoutY="80.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(255, 255, 255, 0.1); -fx-background-radius: 100; -fx-border-radius: 100;" />
+        <!-- Right Panel - Login Form -->
+        <AnchorPane layoutX="509.0" layoutY="47.0" prefHeight="478.0" prefWidth="450.0" style="-fx-background-color: rgba(255, 255, 255, 0.98); -fx-background-radius: 25; -fx-border-radius: 25;">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.2" />
+                    </color>
+                    <radius>30.0</radius>
+                    <offsetY>15.0</offsetY>
+                </DropShadow>
+            </effect>
+            <children>
+                <!-- Login Form Container -->
+                <VBox alignment="TOP_CENTER" layoutX="19.0" layoutY="50.0" prefHeight="448.0" prefWidth="381.0" spacing="25.0">
+                    <children>
+                        <!-- Sign In Header -->
+                        <VBox alignment="CENTER" spacing="10.0">
+                            <children>
+                                <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="32.0" />
+                                    </font>
+                                </Text>
+                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#667eea" height="4.0" width="50.0" />
+                            </children>
+                        </VBox>
 
-        <!-- Version/Copyright Text -->
-        <Text fill="rgba(255, 255, 255, 0.7)" layoutX="615.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Management System v2.0">
-            <font>
-                <Font size="10.0" />
-            </font>
-        </Text>
+                        <!-- Username Field with Icon and Label -->
+                        <VBox spacing="8.0">
+                            <children>
+                                <!-- Username Label - matches controller expectation -->
+                                <Text fx:id="usernameLabel" fill="#6c757d" strokeType="OUTSIDE" strokeWidth="0.0" text="Username or email">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Text>
+                                <HBox alignment="CENTER_LEFT" style="-fx-background-color: #f8f9fa; -fx-border-color: #dee2e6; -fx-border-radius: 12; -fx-background-radius: 12; -fx-padding: 0 15 0 15;">
+                                    <children>
+                                        <Text fill="#6c757d" strokeType="OUTSIDE" strokeWidth="0.0" text="👤">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Text>
+                                        <!-- Username Field - matches controller expectation -->
+                                        <TextField fx:id="usernameField" onKeyPressed="#handleEnterPressed" prefHeight="45.0" prefWidth="282.0" promptText="Enter your username" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-padding: 0 0 0 10; -fx-font-size: 14;">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
 
-        <!-- Loading Indicator (initially hidden) -->
-        <AnchorPane fx:id="loadingPane" layoutX="0.0" layoutY="0.0" prefHeight="492.0" prefWidth="799.0" style="-fx-background-color: rgba(0, 0, 0, 0.3);" visible="false">
-            <Text fill="WHITE" layoutX="326.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authenticating..." textAlignment="CENTER">
-                <font>
-                    <Font name="System Bold" size="18.0" />
-                </font>
-            </Text>
+                        <!-- Password Field with Icon and Label -->
+                        <VBox spacing="8.0">
+                            <children>
+                                <!-- Password Label - matches controller expectation -->
+                                <Text fx:id="passwordLabel" fill="#6c757d" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Text>
+                                <HBox alignment="CENTER_LEFT" style="-fx-background-color: #f8f9fa; -fx-border-color: #dee2e6; -fx-border-radius: 12; -fx-background-radius: 12; -fx-padding: 0 15 0 15;">
+                                    <children>
+                                        <Text fill="#6c757d" strokeType="OUTSIDE" strokeWidth="0.0" text="🔒">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Text>
+                                        <!-- Password Field - matches controller expectation -->
+                                        <PasswordField fx:id="passwordField" maxWidth="285.0" onKeyPressed="#handleEnterPressed" prefHeight="45.0" prefWidth="282.0" promptText="Enter your password" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-padding: 0 0 0 10; -fx-font-size: 14;">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                        </PasswordField>
+                              <Text fill="#6c757d" layoutX="309.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-cursor: hand;" text="👁" wrappingWidth="17.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <!-- Forgot Password Link -->
+                        <HBox alignment="CENTER_RIGHT">
+                            <children>
+                                <Text fill="#667eea" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-cursor: hand; -fx-underline: true;" text="Forgot password?">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+
+                        <!-- Sign In Button - matches controller expectation -->
+                        <Button fx:id="loginButton" defaultButton="true" mnemonicParsing="false" onAction="#handleLogin" prefHeight="50.0" prefWidth="188.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #667eea 0%, #764ba2 100%); -fx-text-fill: white; -fx-background-radius: 25; -fx-font-weight: bold; -fx-font-size: 16; -fx-cursor: hand;" text="Sign In">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color red="0.4" green="0.49" blue="0.92" opacity="0.4" />
+                                    </color>
+                                    <radius>20.0</radius>
+                                    <offsetY>8.0</offsetY>
+                                </DropShadow>
+                            </effect>
+                        </Button>
+
+                        <!-- Alternative Sign In Options -->
+                        <VBox alignment="CENTER" prefHeight="56.0" prefWidth="315.0" spacing="15.0" />
+                    </children>
+                </VBox>
+            </children>
         </AnchorPane>
+
+        <!-- Footer -->
+        <HBox alignment="CENTER" layoutX="500.0" layoutY="560.0" prefWidth="450.0">
+            <children>
+                <Text fill="rgba(255, 255, 255, 0.7)" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Management System v2.0 © 2024">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+
+        <!-- Loading Overlay - matches controller expectation -->
+        <AnchorPane fx:id="loadingPane" layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: rgba(0, 0, 0, 0.5);" visible="false">
+            <children>
+                <VBox alignment="CENTER" layoutX="400.0" layoutY="250.0" prefWidth="200.0" spacing="20.0">
+                    <children>
+                        <!-- Loading Spinner -->
+                        <Circle fill="transparent" radius="25.0" stroke="WHITE" strokeDashArray="50.0, 200.0" strokeWidth="4.0" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Authenticating..." textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+
+        <!-- Additional decorative elements -->
+        <Circle fill="rgba(255, 255, 255, 0.03)" layoutX="850.0" layoutY="150.0" radius="100.0" />
+        <Circle fill="rgba(255, 255, 255, 0.05)" layoutX="900.0" layoutY="450.0" radius="70.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="98.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/logo-removebg-preview.png" />
+         </image>
+      </ImageView>
+
+              <!-- Floating geometric shapes -->
+        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="rgba(255, 255, 255, 0.1)" height="30.0" layoutX="53.0" layoutY="87.0" width="30.0" />
     </children>
 </AnchorPane>
