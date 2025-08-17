@@ -209,6 +209,6 @@ If you encounter any bugs or have feature requests, please:
 ---
 
 <div align="center">
-  <p>Made with ❤️ by [Your Name]</p>
+  <p>Made with ❤️ by Thimeth Zoysa</p>
   <p>⭐ Star this repo if you find it helpful!</p>
 </div>
