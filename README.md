@@ -195,7 +195,7 @@ If you encounter any bugs or have feature requests, please:
 
 ## 📞 Support
 
-- 📧 Email: your.email@example.com
+- 📧 Email: thimethhansana5@gmail.com
 - 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/employee-management-system/discussions)
 - 📖 Wiki: [Project Wiki](https://github.com/yourusername/employee-management-system/wiki)
 
