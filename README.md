@@ -140,7 +140,7 @@ employee-management-system/
 ## 📸 Screenshots
 
 ### Loing
-![Loing](<img width="997" height="626" alt="image" src="https://github.com/user-attachments/assets/16f1f5fd-4592-4c90-b086-a1e3456c964b" />)
+![Loing](https://github.com/user-attachments/assets/16f1f5fd-4592-4c90-b086-a1e3456c964b)
 
 ### Main Dashboard
 ![Dashboard](screenshots/dashboard.png)
