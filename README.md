@@ -139,7 +139,7 @@ employee-management-system/
 
 ## 📸 Screenshots
 
-### Loing
+### Login Ui
 ![Loing](https://github.com/user-attachments/assets/16f1f5fd-4592-4c90-b086-a1e3456c964b)
 
 ### Main Dashboard
